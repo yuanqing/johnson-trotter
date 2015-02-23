@@ -26,7 +26,7 @@ while (iter.hasNext()) {
 Note that:
 
 - Permutations are generated on-the-fly on every call to `next`.
-- Each permutation is a *new* array containing elements of the original array. The original array (ie. `arr` in our example) is unmodified.
+- Each permutation is a *new* array containing elements of the original array. The original array (ie. `arr`, in our example) is unmodified.
 
 ## API
 
