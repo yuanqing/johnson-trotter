@@ -39,7 +39,7 @@ test('empty', function(t) {
 test('single element', function(t) {
 
   var a = { a: 0 };
-  var arr = [ a ];
+  var arr = [a];
 
   var iter = permute(arr);
 
@@ -65,30 +65,30 @@ test('multiple elements', function(t) {
   var arr = [a, b, c, d];
 
   var expected = [
-    [ a, b, c, d ],
-    [ a, b, d, c ],
-    [ a, d, b, c ],
-    [ d, a, b, c ],
-    [ d, a, c, b ],
-    [ a, d, c, b ],
-    [ a, c, d, b ],
-    [ a, c, b, d ],
-    [ c, a, b, d ],
-    [ c, a, d, b ],
-    [ c, d, a, b ],
-    [ d, c, a, b ],
-    [ d, c, b, a ],
-    [ c, d, b, a ],
-    [ c, b, d, a ],
-    [ c, b, a, d ],
-    [ b, c, a, d ],
-    [ b, c, d, a ],
-    [ b, d, c, a ],
-    [ d, b, c, a ],
-    [ d, b, a, c ],
-    [ b, d, a, c ],
-    [ b, a, d, c ],
-    [ b, a, c, d ]
+    [a, b, c, d],
+    [a, b, d, c],
+    [a, d, b, c],
+    [d, a, b, c],
+    [d, a, c, b],
+    [a, d, c, b],
+    [a, c, d, b],
+    [a, c, b, d],
+    [c, a, b, d],
+    [c, a, d, b],
+    [c, d, a, b],
+    [d, c, a, b],
+    [d, c, b, a],
+    [c, d, b, a],
+    [c, b, d, a],
+    [c, b, a, d],
+    [b, c, a, d],
+    [b, c, d, a],
+    [b, d, c, a],
+    [d, b, c, a],
+    [d, b, a, c],
+    [b, d, a, c],
+    [b, a, d, c],
+    [b, a, c, d]
   ];
 
   var iter = permute(arr);
@@ -119,11 +119,11 @@ test('reset', function(t) {
 
     var a = { a: 0 };
     var b = { b: 1 };
-    var arr = [ a, b ];
+    var arr = [a, b];
 
     var expected = [
-      [ a, b ],
-      [ b, a ],
+      [a, b],
+      [b, a],
     ];
 
     var iter = permute(arr);
@@ -148,11 +148,11 @@ test('reset', function(t) {
 
     var a = { a: 0 };
     var b = { b: 1 };
-    var arr = [ a, b ];
+    var arr = [a, b];
 
     var expected = [
-      [ a, b ],
-      [ b, a ],
+      [a, b],
+      [b, a],
     ];
 
     var iter = permute(arr);
