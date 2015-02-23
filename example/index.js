@@ -2,7 +2,9 @@
 
 var permute = require('../');
 
-var iter = permute(['foo', 'bar', 'baz']);
+var arr = ['foo', 'bar', 'baz'];
+
+var iter = permute(arr);
 while (iter.hasNext()) {
   iter.next();
   //=> [ 'foo', 'bar', 'baz' ]
