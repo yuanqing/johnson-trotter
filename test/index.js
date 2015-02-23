@@ -117,11 +117,13 @@ test('reset', function(t) {
 
   t.test('before having terminated', function(t) {
 
-    var arr = [ 0, 1 ];
+    var a = { a: 0 };
+    var b = { b: 1 };
+    var arr = [ a, b ];
 
     var expected = [
-      [ 0, 1 ],
-      [ 1, 0 ],
+      [ a, b ],
+      [ b, a ],
     ];
 
     var iter = permute(arr);
@@ -144,11 +146,13 @@ test('reset', function(t) {
 
   t.test('after having terminated', function(t) {
 
-    var arr = [ 0, 1 ];
+    var a = { a: 0 };
+    var b = { b: 1 };
+    var arr = [ a, b ];
 
     var expected = [
-      [ 0, 1 ],
-      [ 1, 0 ],
+      [ a, b ],
+      [ b, a ],
     ];
 
     var iter = permute(arr);
