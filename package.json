@@ -1,0 +1,33 @@
+{
+  "name": "johnson-trotter",
+  "version": "0.0.0",
+  "description": "An implementation of the Johnson-Trotter permutation algorithm.",
+  "author": "Lim Yuan Qing",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yuanqing/johnson-trotter.git"
+  },
+  "devDependencies": {
+    "istanbul": "^0.3.6",
+    "jshint": "^2.6.0",
+    "tape": "^3.5.0"
+  },
+  "scripts": {
+    "lint": "jshint --verbose index.js test/*.js",
+    "test": "rm -rf coverage && istanbul cover tape test/*.js",
+    "build": "npm run lint && npm test"
+  },
+  "keywords": [
+    "array",
+    "combinations",
+    "combinatorics",
+    "iterate",
+    "iterator",
+    "permutate",
+    "permutation",
+    "permute",
+    "step",
+    "swap"
+  ]
+}
