@@ -1,34 +1,14 @@
 'use strict';
 
-var stoke = require('../');
+var permute = require('../');
 
-stoke('echo "foo `echo \'bar baz\'`"');
-/* [
- *   {
- *     type: 'unquoted',
- *     body: 'echo'
- *   },
- *   {
- *     type: 'double-quoted',
- *     body: [
- *       {
- *         type: 'unquoted',
- *         body: 'foo '
- *       },
- *       {
- *         type: 'back-quoted',
- *         body: [
- *           {
- *             type: 'unquoted',
- *             body: 'echo'
- *           },
- *           {
- *             type: 'single-quoted',
- *             body: 'bar baz'
- *           }
- *         ]
- *       }
- *     ]
- *   }
- * ]
- */
+var iter = permute(['foo', 'bar', 'baz']);
+while (iter.hasNext()) {
+  iter.next();
+  //=> [ 'foo', 'bar', 'baz' ]
+  //=> [ 'foo', 'baz', 'bar' ]
+  //=> [ 'baz', 'foo', 'bar' ]
+  //=> [ 'baz', 'bar', 'foo' ]
+  //=> [ 'bar', 'baz', 'foo' ]
+  //=> [ 'bar', 'foo', 'baz' ]
+}
